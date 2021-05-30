@@ -1,0 +1,29 @@
+<div class="row text-center">
+    <h1 class="text-secondary mt-3">Noticias</h1>
+</div>
+<div class="row text-center bg-primary">
+    <div class="text-center mb-3 mt-3">
+        <div class="col-12 text-center">
+            <div class="me-1 ms-4 align-items-center">
+                <figure>
+                    <img class="img-fluid" src="{{noti.img}}">
+                </figure>
+                <div>
+                    <button  class="btn m-5 bg-success text-white button-big" (click)="anterior()"> << </button>
+                    <button  class="btn  m-5 bg-success text-white button-big" (click)="siguiente()"> >> </button>
+                </div>
+                <h3 class="mb-3 text-warning">{{noti.titulo}}</h3>
+                <p class="mb-3 text-start text-white">{{noti.noticia}}</p>
+                <button class="btn btn-success m-2"(click)="modificarNoticia(noti)" >MODIFIC</button>
+                <button class="btn btn-danger m-2" (click)="borrarNoticia(noti)" >BORRAR</button>
+            </div>
+            <div class="row">
+                <div class="col-12 mt-3 m-2 mb-3">
+                    <button class="btn-warning" (click)="agregarNoticia()">AGREGAR</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</div>

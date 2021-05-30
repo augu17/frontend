@@ -1,0 +1,35 @@
+<div class="card">
+    <div class="card-header">
+      GESTION DE SECTORES
+    </div>
+    <div class="card-body">
+        <form #noticiaForm="ngForm">
+            <div class="mb-3">
+                <label for="idtitulo" class="form-label">Titulo</label>
+                <input name="titulo" type="text" class="form-control" id="idtitulo"
+                  [(ngModel)]="noticia.titulo" >
+              </div>
+              <div class="mb-3">
+                <label for="idnoticia" class="form-label">Cuerpo de la noticia</label>
+                <textarea name="noticia" class="form-control" id="idnoticia" rows="3"
+                [(ngModel)]="noticia.noticia"  ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="idimg" class="form-label">img</label>
+                <input name="img" type="text" class="form-control" id="idimg"
+                [(ngModel)]="noticia.img"  >
+              </div>
+              <div class="mb-3">
+                <label for="idvigente" class="form-label me-4">vigencia </label>
+                <input name="vigente" type="checkbox" id="idvigente"
+                [(ngModel)]="noticia.vigente" >
+              </div>
+
+              <button type="button" class="btn btn-primary" (click)="agregarNoticia()" *ngIf="accion == 'new'">Guardar</button>              
+              <button type="button" class="btn btn-secondary" (click)="modificarNoticia()" *ngIf="accion == 'update'">Modificar</button> 
+              <button type="button" class="btn btn-primary" (click)="limpiarFormulario(noticiaForm)">Limpiar</button>
+              <button type="button" class="btn btn-primary" (click)="cancelar()">Cancelar</button>             
+
+        </form>
+    </div>
+</div>
